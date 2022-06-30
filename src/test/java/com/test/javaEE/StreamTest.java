@@ -1,4 +1,4 @@
-package com.test.JavaEE;
+package com.test.javaEE;
 
 import cn.hutool.json.JSONUtil;
 import org.junit.Test;

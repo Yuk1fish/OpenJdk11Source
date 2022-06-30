@@ -1,9 +1,8 @@
-package com.test.JavaEE;
+package com.test.javaEE;
 
 import org.junit.Test;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * @description:

@@ -1,4 +1,4 @@
-package com.test.JavaEE;
+package com.test.javaEE;
 
 import org.junit.Test;
 

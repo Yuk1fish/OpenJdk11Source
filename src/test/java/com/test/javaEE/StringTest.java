@@ -1,11 +1,8 @@
-package com.test.JavaEE;
+package com.test.javaEE;
 
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * @description:
