@@ -20,9 +20,11 @@ public class MainTest {
 //        doubleEgg = new Egg(doubleEgg);
 //        System.out.println(doubleEgg.getDescription() + "花费" + doubleEgg.cost() + "元");
 
-        //加火腿和鸡蛋
+
+        //制作煎饼果子
         Pancake battercakePlus = new Battercake();
         System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
+        //加火腿和鸡蛋
         battercakePlus = new Sausage(battercakePlus);
         System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
         battercakePlus = new Egg(battercakePlus);

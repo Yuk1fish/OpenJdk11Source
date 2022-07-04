@@ -1,7 +1,7 @@
 package com.test.decorator;
 
 /**
- * @description:
+ * @description:具体实现组件对象接口的对象
  * @author:Xueyu
  * @date: 2022/7/2
  * @copyRight:
@@ -19,7 +19,5 @@ public class Battercake extends Pancake {
     public double cost() {
         return 8;
     }
-
-
 
 }
