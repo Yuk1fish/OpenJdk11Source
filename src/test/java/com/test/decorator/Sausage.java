@@ -17,7 +17,6 @@ public class Sausage extends CondimentDecorator {
 
     @Override
     public double cost() {
-        System.out.println("3");
         return pancake.cost() + 2;
     }
 }

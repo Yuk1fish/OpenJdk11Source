@@ -18,7 +18,6 @@ public class Egg extends CondimentDecorator {
 
     @Override
     public double cost() {
-        System.out.println("2");
         return pancake.cost() + 1;
     }
 }

@@ -3,7 +3,7 @@ package com.test.composite;
 import org.junit.Test;
 
 /**
- * @description:
+ * @description: 组合模式 demo
  * @author:Xueyu
  * @date: 2022/6/30
  * @copyRight:

@@ -1,7 +1,7 @@
 package com.test.decorator;
 
 /**
- * @description:
+ * @description:  装饰者模式 demo
  * @author:Xueyu
  * @date: 2022/7/2
  * @copyRight:
@@ -22,8 +22,14 @@ public class MainTest {
 
         //加火腿和鸡蛋
         Pancake battercakePlus = new Battercake();
+        System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
         battercakePlus = new Sausage(battercakePlus);
+        System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
         battercakePlus = new Egg(battercakePlus);
         System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
+//        battercakePlus = new Sausage(battercakePlus);
+//        System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
+//        battercakePlus = new Egg(battercakePlus);
+//        System.out.println(battercakePlus.getDescription() + "花费" + battercakePlus.cost() + "元");
     }
 }
