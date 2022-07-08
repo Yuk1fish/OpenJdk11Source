@@ -14,6 +14,6 @@ public class MainTest {
         WxService wxService = new WxService();
         wxService.addObServer(new User1());
         wxService.addObServer(new User2());
-        wxService.notifyMsg(LocalDateTime.now().toString());
+        wxService.notifyMsg("13：00局部阴转阵雨");
     }
 }

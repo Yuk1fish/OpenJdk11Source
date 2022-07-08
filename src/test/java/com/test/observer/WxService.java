@@ -3,7 +3,7 @@ package com.test.observer;
 import java.util.Vector;
 
 /**
- * @description:
+ * @description: 具体被观察者
  * @author:Xueyu
  * @date: 2022/7/7
  * @copyRight:
