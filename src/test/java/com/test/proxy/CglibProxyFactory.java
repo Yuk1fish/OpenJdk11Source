@@ -24,9 +24,11 @@ public class CglibProxyFactory implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("cglib proxy ...");
-        Object invoke = method.invoke(target, objects);
+//        Object invoke = method.invoke(target, objects);
+
+        Object o1 = methodProxy.invokeSuper(o, objects);
         System.out.println("cglib proxy end ...");
-        return invoke;
+        return o1;
     }
 
     public Object getProxyInstance(){
