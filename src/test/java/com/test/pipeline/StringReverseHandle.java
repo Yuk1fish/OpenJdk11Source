@@ -10,6 +10,7 @@ public class StringReverseHandle implements Handler<String, String> {
 
     @Override
     public String process(String input) {
+        System.out.println("调用stringReverse...");
         return String.valueOf(new StringBuilder(input).reverse());
     }
 }

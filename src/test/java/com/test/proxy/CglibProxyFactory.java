@@ -24,14 +24,13 @@ public class CglibProxyFactory implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("cglib proxy ...");
-//        Object invoke = method.invoke(target, objects);
-
-        Object o1 = methodProxy.invokeSuper(o, objects);
+//        Object invoke = methodProxy.invoke(target, objects);
+        Object invoke = methodProxy.invokeSuper(o, objects);
         System.out.println("cglib proxy end ...");
-        return o1;
+        return invoke;
     }
 
-    public Object getProxyInstance(){
+    public Object getProxyInstance() {
         //工具类，类似于JDK动态代理的Proxy类
         Enhancer enhancer = new Enhancer();
         //设置父类

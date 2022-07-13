@@ -9,6 +9,7 @@ package com.test.pipeline;
 public class StringToIntHandler implements Handler<String,Integer> {
     @Override
     public Integer process(String input) {
+        System.out.println("调用StringToInt...");
         return Integer.parseInt(input);
     }
 }

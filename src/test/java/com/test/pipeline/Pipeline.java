@@ -1,12 +1,12 @@
 package com.test.pipeline;
 
 /**
- * @description: 管道
- * @author:Xueyu
- * @date: 2022/7/13
- * @copyRight:
+ * @description: 管道连接器
+ * @Author: Xueyu
+ * @Date: 2022/7/12 20:16
+ * @Description:
  */
-public class Pipeline<I, O> {
+public class Pipeline<I,O> {
 
     private final Handler<I, O> currentHandler;
 
@@ -18,9 +18,9 @@ public class Pipeline<I, O> {
         return currentHandler.process(input);
     }
 
+
     <M> Pipeline<I, M> addHandler(Handler<O, M> newHandler) {
         return new Pipeline<>(input -> newHandler.process(currentHandler.process(input)));
     }
-
 
 }

@@ -9,11 +9,13 @@ package com.test.pipeline;
 public class MainTest {
 
     public static void main(String[] args) {
-        Integer execute = new Pipeline<>(new IntToStringHandle())
+
+
+        Integer execute = new Pipeline<>(new IntToStringHandler())
                 .addHandler(new StringUpCaseHandle())
                 .addHandler(new StringReverseHandle())
                 .addHandler(new StringToIntHandler())
-                .execute(1234567);
+                .execute(123123123);
         System.out.println(execute);
     }
 }

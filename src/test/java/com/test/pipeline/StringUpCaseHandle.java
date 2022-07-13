@@ -10,6 +10,7 @@ public class StringUpCaseHandle implements Handler<String, String> {
 
     @Override
     public String process(String input) {
+        System.out.println("调用StringUpCase...");
         return input.toUpperCase();
     }
 }

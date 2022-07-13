@@ -15,7 +15,7 @@ public class MainTest {
 //        Internet proxyInvoke = new JdkProxyFactory(new RealInternet()).getProxyInvoke();
 //    ;
 //        proxyInvoke.connectTo("weibo.com");    proxyInvoke.connectTo("www.baidu.com")
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "F:\\123");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "D:\\ProjectManager\\localmethod");
         RealInternet proxyInstance = (RealInternet) new CglibProxyFactory(new RealInternet()).getProxyInstance();
         proxyInstance.connectTo("www.baidu.com");
     }

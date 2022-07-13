@@ -1,13 +1,12 @@
 package com.test.pipeline;
 
 /**
- * @description: 处理器
- * @author:Xueyu
- * @date: 2022/7/13
- * @copyRight:
+ * @description: 处理器接口
+ * @Author: Xueyu
+ * @Date: 2022/7/12 20:05
+ * @Description:
  */
-public interface Handler<I, O> {
+public interface Handler<I,k> {
 
-    O process(I input);
-
+   public k process(I input);
 }
