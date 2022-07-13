@@ -2,6 +2,8 @@ package com.test.general;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 
 public class IntegerTest {
 
@@ -64,5 +66,4 @@ public class IntegerTest {
         System.out.println(Integer.toBinaryString(n));
         System.out.println("结果="+result);
     }
-
 }
