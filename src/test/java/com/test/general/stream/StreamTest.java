@@ -1,4 +1,4 @@
-package com.test.general;
+package com.test.general.stream;
 
 import cn.hutool.json.JSONUtil;
 import org.junit.Test;
