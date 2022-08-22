@@ -3,8 +3,7 @@ package com.test.general.stream;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -61,5 +60,41 @@ public class StreamTest2 {
                 .collect(Collectors.toList());
 
     }
+
+    @Test
+    public void test5() {
+        //获取“书籍”类别中最便宜的产品
+        List<Product> products = new ArrayList<>();
+        Product p = products.stream()
+                .filter(product -> "book".equalsIgnoreCase(product.getName()))
+                .sorted(Comparator.comparing(Product::getPrice))
+                .findFirst()
+                .get();
+    }
+
+    @Test
+    public void test6() {
+        // 获取最近的 3 个订单
+        List<Order> orders = new ArrayList<>();
+        List<Order> collect = orders.stream()
+                .sorted(Comparator.comparing(Order::getOrderDate).reversed())
+                .limit(3)
+                .collect(Collectors.toList());
+    }
+
+
+    @Test
+    public void mappingExample() {
+        //按年龄group by
+        List<Person> list = new ArrayList<>();
+        list.add(new Person("Ram", 30));
+        list.add(new Person("Shyam", 20));
+        list.add(new Person("Shiv", 20));
+        list.add(new Person("Mahesh", 30));
+        Map<Integer, String> nameByAgeMap = list.stream().collect(
+                Collectors.groupingBy(Person::getAge, Collectors.mapping(Person::getName, Collectors.joining(",", "[", "]"))));
+        nameByAgeMap.forEach((k, v) -> System.out.println("Age:" + k + "  Persons: " + v));
+    }
+
 
 }
